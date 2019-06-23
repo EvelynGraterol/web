@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><!--Carga del boostrap-->
+    <link href="estilossenado.css" rel="stylesheet">
+
+</head>
+
+    
+<body>
+    
+        <header> <!--Definición de todos los elementos que van contenidos antes de la tabla-->
+                <img src = "img/s_prueba1.png" class ="rounded-circle"  alt="prueba" height="150px" width="150px" > <!--Def de la imagen-->
+                <img src = "img/mail-send.png" class ="correo"  alt="mail" height="50px" width="50px" >
+                
+                        <h1> Transparent Government in Fact</h1>   <!--Titulo de la web--> 
+
+                        <address>
+                            <a href="mailto:info@tgif.com">info@tgif.com</a>    
+                        </address>  
+           
+                <ul class="nav nav-tabs"> <!--Clase para aplicar bootstrap al contenido de la barra de nav-->
+
+                                <li class="nav-item"> <!--LLamado al primer item de la barra de nav-->
+                                  <a class="nav-link active" href="index.html">Home</a><!--Una vez creadas las pag. Home  se vincula en href-->
+                                </li>
+
+
+                                <li class="nav-item dropdown"  id = "pestana"><!--Despliegue de las opciones-->
+                                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Congress 113</a> <!--Llamado al 2do elemento en la barra de nav-->
+                                  
+                                  <div class="dropdown-menu"> <!--Menu que permite desplegar las opciones de Congress 113-->
+                                     <a class="dropdown-item" href="house-data.html">House</a> <!--Una vez creadas las pag. House  se vincula en href-->
+                                     <a class="dropdown-item">Senate</a>
+                                    
+                                     
+                                  </div>
+                                </li>
+                                
+                </ul>
+        </header> 
+
+        <div class = "info">
+                
+                <h2>Senator</h2><!--Subtitulo con parrafo informativo-->
+                <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+                
+        </div>
+
+    
+                                <!-- Filter -->
+                                   
+                              <div class="container-fluid">
+                                  <div id="chqkboxName" class="col-xs-12 col-sm-7" >
+                                      Filter by Party:
+                                      <input type="checkbox" name="selParty" value="D" onchange="verificarPartido(this)" checked>Democrat
+                                      <input type="checkbox" name="selParty" value="R" onchange="verificarPartido(this)" checked>Republican
+                                      <input type="checkbox" name="selParty" value="I" onchange="verificarPartido(this)" checked>Independent
+                                  </div>
+                                  <div class='dropdown'>
+                                      <form >
+                                          Filter by State:
+                                          <select name = "state" id ="state" onchange="verificarEstado(this)" checked > 
+                                              <option value="All">All States</option>
+                                              <option value="AK">AK</option>
+                                              <option value="AL">AL</option>
+                                              <option value="AR">AR</option>
+                                              <option value="AZ">AZ</option>
+                                              <option value="CA">CA</option>
+                                              <option value="CO">CO</option>
+                                              <option value="CT">CT</option>
+                                              <option value="DE">DE</option>
+                                              <option value="FL">FL</option>
+                                              <option value="GA">GA</option>
+                                              <option value="HI">HI</option>
+                                              <option value="IA">IA</option>
+                                              <option value="ID">ID</option>
+                                              <option value="IL">IL</option>
+                                              <option value="IN">IN</option>
+                                              <option value="KS">KS</option>
+                                              <option value="KY">KY</option>
+                                              <option value="LA">LA</option>
+                                              <option value="MA">MA</option>
+                                              <option value="MD">MD</option>
+                                              <option value="ME">ME</option>
+                                              <option value="MI">MI</option>
+                                              <option value="MN">MN</option>
+                                              <option value="MO">MO</option>
+                                              <option value="MS">MS</option>
+                                              <option value="MT">MT</option>
+                                              <option value="NC">NC</option>
+                                              <option value="ND">ND</option>
+                                              <option value="NE">NE</option>
+                                              <option value="NH">NH</option>
+                                              <option value="NJ">NJ</option>
+                                              <option value="NM">NM</option>
+                                              <option value="NV">NV</option>
+                                              <option value="NY">NY</option>
+                                              <option value="OH">OH</option>
+                                              <option value="OK">OK</option>
+                                              <option value="OR">OR</option>
+                                              <option value="PA">PA</option>
+                                              <option value="RI">RI</option>
+                                              <option value="SC">SC</option>
+                                              <option value="SD">SD</option>
+                                              <option value="TN">TN</option>
+                                              <option value="TX">TX</option>
+                                              <option value="UT">UT</option>
+                                              <option value="VA">VA</option>
+                                              <option value="VT">VT</option>
+                                              <option value="WA">WA</option>
+                                              <option value="WI">WI</option>
+                                              <option value="WV">WV</option>
+                                              <option value="WY">WY</option>
+                                          </select> 
+                                      </form>
+                                  </div>
+                              </div>
+                                    
+
+
+    <table class="table table-striped"  id="senate-data"> <!--Nombres de las columnas correspondientes a la tabla-->
+        <thead>
+            <tr>
+            
+                    <td><strong>Name</strong></td>
+                    <td><strong>Party</strong></td>
+                    <td><strong>State</strong></td>
+                    <td><strong>Seniority</strong></td>
+                    <td><strong>Percentage</strong></td>
+           </tr>
+        
+        </thead> 
+
+          <!-- Aqui ya estoy llamando la info que quiero imprimir -->
+     </table>
+   
+
+      
+   <!-- Pie de página -->
+    <footer class="page-footer">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">
+                  <a> © 2016 TGIF | All Rights Reserved</a>
+                </div>
+                
+              
+ </footer>
+
+ <script src="senatedata.js"></script> <!--Primero  va el que contiene los datos-->
+ <script src="main.js"></script>   <!--Luego va el que los manipula los datos y abajo conexion con Boostrap-->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
