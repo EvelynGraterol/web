@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
+
+
+
+
+header{
+    width: 100%;
+    height: 272px;
+    background:lightslategray;
+    color: #fff;
+  
+
+    position: fixed; /*Header fijo que siempre este por encima de la pagina*/
+    justify-content: center;
+    top:0;
+    left:0;
+    z-index:100;
+
+}
+
+body{
+
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 100%;
+    width: 100%;
+    }
+    
+ul{
+    margin-top: 230px !important;
+}
+.nav nav-tabs{
+    display: inline-flex;
+    position: relative;
+    color: aqua;
+    height: 20px;
+}
+
+
+
+.info{
+     margin-left: 50px;
+     margin-right: 50px;
+     margin-top:300px;
+     display: center;
+   
+}
+
+
+
+.rounded-circle{
+    display: inline-block;
+    margin-left: 450px;
+    margin-top: 0 px;
+    margin-bottom: 40px;
+    
+}
+
+.mover{
+    position: absolute;
+    top:70px;
+}
+
+    
+    
+h1{
+    display :inline-block;
+    font-family: 'Tangerine', cursive;
+    position: relative;
+    bottom:10px;
+}
+
+
+
+#pestana{
+    margin-left:10px;
+}
+
+
+
+h2{
+    display: inline-block;
+    position:absolute;
+    margin-top: 100px;
+    margin-left: 0px;
+    
+}
+
+.page-footer{  /*Hay que tomar en cuenta  que footer toma como margen de referencia la tabla.*/
+    
+    background-color: blue;
+    display: inline-block;
+    color: white;
+    top: 800px;
+    margin-bottom: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
+    position: absolute;
+    
+}
+
+#footer{
+   position: relative;
+   left:0px;
+   top: 500px;
+   bottom:0px;
+   width:100%;
+   
+}
+
+
+#botonunico{
+    top: 600px;
+    position:absolute; /*!Nota importante: Si yo quiero que un elemento, salga del body su position debe ser absoluta.*/
+    margin-left: 0px;
+}
+
+address { 
+    display: inline-block;
+    position: relative;
+    margin-left: 1000px;
+    bottom: 228px;
+    color: #fff
+   
+}
+
+.correo{
+
+    display: inline-block;
+    text-decoration-line: none;
+    position: absolute;
+    margin-left: 500px;
+    bottom:230px;
+
+
+}
+
